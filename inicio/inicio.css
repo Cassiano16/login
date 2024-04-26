@@ -1,0 +1,41 @@
+*{/*muda as cofigurações padrões do html para zero*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font: 1em sans-serif ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;/*tamanho da tela toda*/
+  background-color: #27272a;
+  color: #e2e8f0;
+  opacity: 90%;
+}
+.h1{
+  text-align: center;
+}
+.main{
+  margin-top: 2%;
+  display: flex;
+  gap: 5%;
+  width: 95vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button{
+  width: 200px;
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 15px;
+  padding: 2px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+

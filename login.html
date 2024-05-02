@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site de login e cadastro</title>
     <link rel="stylesheet" href="estilo.css">
-    <script>function submit(){
+    <script>function submitForm() 
+    {
+        let senha = document.querySelector("#senha_l").value;
+        let usuario = document.querySelector("#usuario_l").value;
+
+        // Verificação de campos vazios
+        if (senha === "") {
+            window.alert("Você não digitou a senha.");
+        } 
+        else if (usuario === "") {
+            window.alert("Você não digitou o usuário.");
+        } 
+        else {
             document.querySelector("form").submit();
         }
+    }
     </script>
 </head>
 <body>

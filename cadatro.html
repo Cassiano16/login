@@ -5,17 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site de login e cadastro</title>
     <link rel="stylesheet" href="estilo.css">
-    <script>function submit(){
-        let senha = document.querySelector("#senha_c").value;
-        let senha_v = document.querySelector("#senha_verificar").value;
-        if(senha != senha_v)
-        {
-            window.alert("as senhas estão diferentes");
+    <script>
+        function submitForm() {
+            let senha = document.querySelector("#senha_c").value;
+            let senhaVerificar = document.querySelector("#senha_verificar").value;
+            let usuario = document.querySelector("#usuario_c").value;
+            let email = document.querySelector("#email_c").value;
+
+            // Verificação de campos vazios
+            if (senha === "") 
+            {
+                window.alert("Você não digitou a senha.");
+            }  else if (senhaVerificar === "") 
+            {
+                window.alert("Você não verificou a senha.");
+            } else if (usuario === "") 
+            {
+                window.alert("Você não digitou o usuário.");
+            } else if (email === "") 
+            {
+                window.alert("Você não digitou o email.");
+            } else if (senha.length < 8) 
+            {
+                window.alert("A senha deve ter pelo menos 8 caracteres.");
+            } else if (!validateEmail(email)) 
+            {
+                window.alert("O email inserido não é válido.");
+            } else if (senha !== senhaVerificar) 
+            {
+                window.alert("As senhas estão diferentes.");
+            } else 
+            {
+                document.querySelector("form").submit();
+            }
         }
-        else{
-            document.querySelector("form").submit();
+
+        function validateEmail(email) {
+            // Expressão regular para validar o formato do email
+            let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
         }
-      }</script>
+    </script>
 </head>
 <body>
     <div class="card 2">
@@ -23,19 +53,19 @@
             <h2>Cadastro</h2>
         </div>
         <form class="cadastro" action="dados_cadastro.php" method="post">
-                <label for="usuario_c">Usúario:</label>
-                <input type="text" name="usuario" id="usuario_c" required>
-                            
-                <label for="email_c">Email:</label>
-                <input type="email" name="email" id="email_c" required>
+            <label for="usuario_c">Usuário:</label>
+            <input type="text" name="usuario" id="usuario_c" required>
 
-                <label for="senha_c">Senha:</label>
-                <input type="password" name="senha" id="senha_c" required>
+            <label for="email_c">Email:</label>
+            <input type="email" name="email" id="email_c" required>
 
-                <label for="senha_verificar">verificar senha:</label>
-                <input type="password" name="senha_v" id="senha_verificar" required>
+            <label for="senha_c">Senha:</label>
+            <input type="password" name="senha" id="senha_c" required>
 
-            <div onclick="submit()" class="conectar_cadastro">                
+            <label for="senha_verificar">Verificar senha:</label>
+            <input type="password" name="senha_v" id="senha_verificar" required>
+
+            <div onclick="submitForm()" class="conectar_cadastro">                
                 <p>Cadastrar</p>
             </div>
         </form>

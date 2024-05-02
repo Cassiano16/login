@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site de login e cadastro</title>
     <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-    <div class="card 2"><!--o mesmo-->
+    <div class="card 2">
         <div class="border">
             <h2>Cadastro</h2>
         </div>
-        <div class="cadastro">
-            <label for="usuario_c">Usúario:</label>
-            <input type="text" name="usuario" id="usuario_c">            
-            <label for="email_c">Email:</label>
-            <input type="email" name="email" id="email_c">
-            <label for="senha_c">Senha:</label>
-            <input type="password" name="senha" id="senha_c">
-            <label for="senha_verificar">verificar senha:</label>
-            <input type="password" name="senha" id="senha_verificar">
-        </div>
-        <a href="#"><p>Cadastrar</p><div class="conectar_cadastro" onclick="verificar()"> </div></a>
-        
+        <form class="cadastro" action="dados_cadastro.php" method="post">
+                <label for="usuario_c">Usúario:</label>
+                <input type="text" name="usuario" id="usuario_c" required>
+                            
+                <label for="email_c">Email:</label>
+                <input type="email" name="email" id="email_c" required>
+
+                <label for="senha_c">Senha:</label>
+                <input type="password" name="senha" id="senha_c" required>
+
+                <label for="senha_verificar">verificar senha:</label>
+                <input type="password" name="senha_v" id="senha_verificar" required>
+
+            <button type="submit" class="conectar_cadastro">                
+                <p>Cadastrar</p>
+            </button>
+        </form>
     </div>
 </body> 
 </html>

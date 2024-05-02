@@ -11,16 +11,15 @@
         <div class="border"><!--usado para o card title-->
             <h2>Login</h2>
         </div>
-        <div class="login">
+        <form class="login" action="dados_login.php" method="post">
             <label for="usuario_l">Usúario:</label>
-            <input type="text" name="usuario" id="usuario_l">
+            <input type="text" name="usuario" id="usuario_l" required>
             <label for="senha_l">Senha:</label>
-            <input type="password" name="senha" id="senha_l">
-        </div>
-        <div class="conectar_cadastro">
-            <a href=""><p>Conectar</p></a>
-        </div>
-    </div>
-
+            <input type="password" name="senha" id="senha_l" required>
+        
+            <button type="submit" class="conectar_cadastro">
+                <p>Conectar</p>
+            </button>
+        </form>
 </body> 
 </html>

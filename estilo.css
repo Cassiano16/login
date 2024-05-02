@@ -36,18 +36,18 @@ input{/*muda cor dos inputs*/
     text-align: center;
 }
 .conectar_cadastro{
+    display: inline-block;
     border: 1px solid #e2e8f0;
     border-radius: 7px;
     padding: 0.5% 1%;
-    text-decoration: none;
     color: inherit;
     margin-top: 5px;
-    background-color: #27272a;
     letter-spacing: 1px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size:small;
     cursor: pointer;
+
     
 }
 .conectar_cadastro:hover{

@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site de login e cadastro</title>
     <link rel="stylesheet" href="estilo.css">
+    <script>function submit(){
+        let senha = document.querySelector("#senha_c").value;
+        let senha_v = document.querySelector("#senha_verificar").value;
+        if(senha != senha_v)
+        {
+            window.alert("as senhas estão diferentes");
+        }
+        else{
+            document.querySelector("form").submit();
+        }
+      }</script>
 </head>
 <body>
     <div class="card 2">
@@ -24,9 +35,9 @@
                 <label for="senha_verificar">verificar senha:</label>
                 <input type="password" name="senha_v" id="senha_verificar" required>
 
-            <button type="submit" class="conectar_cadastro">                
+            <div onclick="submit()" class="conectar_cadastro">                
                 <p>Cadastrar</p>
-            </button>
+            </div>
         </form>
     </div>
 </body> 

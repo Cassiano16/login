@@ -7,11 +7,6 @@ $dia_de_hoje = date('d/m/Y');
 $hora = date('H:i:s');
 
 $conn = new mysqli('localhost', 'root', '', 'login');//server, usuario, senha, nome_do_banco
-if ($senha != $senha_v) {
-  echo 'As senhas estão diferentes';
-}
-else
-{
   if($conn -> connect_error){
     die("falha ao se conectar ao banco".$conn -> connect_error);
   }
@@ -28,5 +23,4 @@ else
 
   $smtp->close();
   $conn->close();
-}
 ?>

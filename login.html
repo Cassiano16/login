@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site de login e cadastro</title>
     <link rel="stylesheet" href="estilo.css">
+    <script>function submit(){
+            document.querySelector("form").submit();
+        }
+    </script>
 </head>
 <body>
     <div class="card 1"><!--usado para criar um card-->
@@ -17,9 +21,9 @@
             <label for="senha_l">Senha:</label>
             <input type="password" name="senha" id="senha_l" required>
         
-            <button type="submit" class="conectar_cadastro">
+            <div onclick="submit()" class="conectar_cadastro">
                 <p>Conectar</p>
-            </button>
+            </div>
         </form>
 </body> 
 </html>

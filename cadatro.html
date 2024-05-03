@@ -13,18 +13,9 @@
             let email = document.querySelector("#email_c").value;
 
             // Verificação de campos vazios
-            if (senha === "") 
+            if (senha === "" || senhaVerificar === "" || email === "" || usuario === "") 
             {
-                window.alert("Você não digitou a senha.");
-            }  else if (senhaVerificar === "") 
-            {
-                window.alert("Você não verificou a senha.");
-            } else if (usuario === "") 
-            {
-                window.alert("Você não digitou o usuário.");
-            } else if (email === "") 
-            {
-                window.alert("Você não digitou o email.");
+                window.alert("Você não preencheu todos os campos.");
             } else if (senha.length < 8) 
             {
                 window.alert("A senha deve ter pelo menos 8 caracteres.");
